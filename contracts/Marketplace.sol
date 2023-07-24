@@ -15,7 +15,7 @@ contract Marketplace is ReentrancyGuard {
 
     address payable private owner;
 
-    // Challenge: make this price dynamic according to the current currency price
+    
     uint256 private listingFee = 0.045 ether;
 
     mapping(uint256 => MarketItem) private marketItemIdToMarketItem;
@@ -137,9 +137,6 @@ contract Marketplace is ReentrancyGuard {
         payable(owner).transfer(listingFee);
     }
 
-    /**
-     * @dev Fetch non sold and non canceled market items
-     */
     function fetchAvailableMarketItems() public view returns (MarketItem[] memory) {
         uint256 itemsCount = _marketItemIds.current();
         uint256 soldItemsCount = _tokensSold.current();
@@ -200,8 +197,7 @@ contract Marketplace is ReentrancyGuard {
         uint256 currentIndex = 0;
 
         for (uint256 i = 0; i < totalItemsCount; i++) {
-            // Is it ok to assign this variable for better code legbility?
-            // Is it better to use memory or storage in this case?
+
             MarketItem storage item = marketItemIdToMarketItem[i + 1];
             address addressPropertyValue = getMarketItemAddressByProperty(item, _addressProperty);
             if (addressPropertyValue != msg.sender) continue;
@@ -211,8 +207,6 @@ contract Marketplace is ReentrancyGuard {
         MarketItem[] memory items = new MarketItem[](itemCount);
 
         for (uint256 i = 0; i < totalItemsCount; i++) {
-            // Is it ok to assign this variable for better code legbility?
-            // Is it better to use memory or storage in this case?
             MarketItem storage item = marketItemIdToMarketItem[i + 1];
             address addressPropertyValue = getMarketItemAddressByProperty(item, _addressProperty);
             if (addressPropertyValue != msg.sender) continue;
