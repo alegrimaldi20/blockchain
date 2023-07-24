@@ -1,6 +1,6 @@
 ## Blockchain
 Este es un DApp NFT Marketplace completo.
-Realizado con NodeJS, Hardhat, Solidity, ReactJS, NextJS y Vercel.
+Realizado con Nodejs, Hardhat, Solidity, React, NextJS y Vercel.
 
 ## Acciones básicas
 Puede crear (mint) nuevos tokens, cargando su imagen y metadatos en IPFS usando Pinata.
@@ -33,5 +33,5 @@ El frontend se implementa automáticamente mediante la integración de Github de
 - Ejecutar npm run nodepara iniciar una red de prueba de cadena de bloques EVM local
 - Ejecute npm run setup para implementar contratos NFT y Marketplace y realice algunas acciones iniciales en la cadena de bloques local
 - Ejecutar npm run dev para iniciar la aplicación frontend
-- Asegúrate de usar Localhost 8545como red de Metamaskl
+- Asegúrate de usar Localhost 8545 como red de Metamaskl
 - Ejecutar `npm run deploy:mumbai` para implementar contratos en Polygon`s Testnet (Mumbai).
