@@ -33,7 +33,5 @@ El frontend se implementa automáticamente mediante la integración de Github de
 - Ejecutar npm run nodepara iniciar una red de prueba de cadena de bloques EVM local
 - Ejecute npm run setup para implementar contratos NFT y Marketplace y realice algunas acciones iniciales en la cadena de bloques local
 - Ejecutar npm run dev para iniciar la aplicación frontend
-- Asegúrate de usar Localhost 8545como red de Metamask
-- El frontend se implementa automáticamente en `main` la sucursal usando la integración de github de Vercel
-- Configure ACCOUNT_PRIVATE_KEY .env.localy envíele algunos tokens Testnet Matic de Polygon
+- Asegúrate de usar Localhost 8545como red de Metamaskl
 - Ejecutar `npm run deploy:mumbai` para implementar contratos en Polygon`s Testnet (Mumbai).
